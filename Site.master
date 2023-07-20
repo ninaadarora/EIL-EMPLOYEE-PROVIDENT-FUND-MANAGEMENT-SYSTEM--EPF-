@@ -1,0 +1,79 @@
+﻿<%@ MasterLanguage="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MasterTemp.Site"%>  
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head runat="server">  
+<title>  
+<asp:ContentPlaceHolder ID="titleContent" runat="server"/>  
+</title>  
+<script src="Scripts/jquery.js"></script>  
+<link href="Styles/Site.css"rel="stylesheet"/>  
+<asp:ContentPlaceHolderID="head" runat="server">  
+</asp:ContentPlaceHolder>  
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("ul#topnav li").hover(function () {
+            $(this).css({ 'background': '#f0f0f0' });
+            $(this).find("span").show();
+        }, function () {
+            $(this).css({ 'background': 'none' });
+            $(this).find("span").hide();
+        });
+    });
+</script>  
+</head>  
+<body>  
+<form id="form1" runat="server">  
+<div class="page">  
+<div class="header">  
+<div class="title">  
+<h1>C# Sharp Corner</h1>  
+</div>  
+</div>  
+<ul id="topnav">  
+<li><a id="A1" href="#" runat="server">Home</a></li>  
+<li>  
+<a id="A2" href="#" runat="server">About</a>  
+<span>  
+<a id="A3" href="#" runat="server">Sub Menu 1</a> |  
+<a id="A4" href="#" runat="server">Sub Menu 2</a> |  
+<a id="A5" href="#" runat="server">Sub Menu 3</a>  
+</span>  
+</li>  
+<li>  
+<a id="A6" href="#" runat="server">Services</a>  
+<span>  
+<a id="A7" href="#" runat="server">Sub Menu 1</a> |  
+<a id="A8" href="#" runat="server">Sub Menu 2</a> |  
+<a id="A9" href="#" runat="server">Sub Menu 3</a>  
+</span>  
+</li>  
+<li>  
+<a id="A10" href="#" runat="server">Portfolio</a>  
+<span>  
+<a id="A11" href="#" runat="server">Sub Menu 1</a> |  
+<a id="A12" href="#" runat="server">Sub Menu 2</a> |  
+<a id="A13" href="#" runat="server">Sub Menu 3</a> |  
+<a id="A14" href="#" runat="server">Sub Menu 1</a> |  
+<a id="A15" href="#" runat="server">Sub Menu 2</a> |  
+<a id="A17" href="#" runat="server">Sub Menu 3</a>  
+</span>  
+</li>  
+<li><a id="A16" href="#" runat="server">Contact</a></li>  
+</ul>  
+<div class="main">  
+<asp:ContentPlaceHolderID="MainContent" runat="server">  
+</asp:ContentPlaceHolder>  
+</div>  
+<div class="clear">  
+</div>  
+<div class="footer">  
+<br/>  
+                Copyright @ 2014  
+<asp:HyperLinkID="HyperLink1" runat="server"NavigateUrl="http://www.c-sharpcorner.com/"  
+Target="_blank" ForeColor="Orange" Style="text-decoration: none"> C# Corner </asp:HyperLink>  
+                All Rights Reserved.    
+</div>  
+</div>  
+</form>  
+</body>  
+</html> 
